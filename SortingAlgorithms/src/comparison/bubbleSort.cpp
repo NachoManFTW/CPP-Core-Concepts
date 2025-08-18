@@ -4,6 +4,7 @@
 static void BubbleSort(std::vector<int>& vector)
 {
 	int size = vector.size() - 1; //Get size of vector
+
 	for (int i = 0; i <= size; i++) //Loop over vector size, first value
 	{
 		for (int j = i + 1; j <= size; j++)//Loop over vector size, second value
@@ -14,9 +15,7 @@ static void BubbleSort(std::vector<int>& vector)
 			//If the first is greater than the second, swap places, and continue the loop
 			if (first > second)
 			{
-				auto temp = vector[i]; //Temp for swapping
-				vector[i] = vector[j];
-				vector[j] = temp;
+				std::swap(vector[j], vector[i]);
 			}
 		}
 	}
